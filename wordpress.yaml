@@ -72,10 +72,12 @@ metadata:
 spec:
   ports:
     - port: 80
+      targetPort: 80
+      nodePort: 30007
   selector:
     app: wordpress
     tier: frontend
-  type: LoadBalancer
+  type: NodePort
 
 ---
 apiVersion: apps/v1
